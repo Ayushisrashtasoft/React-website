@@ -1,0 +1,16 @@
+.comman-button {
+    background-color: #eb4435;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 19px 26px;
+    font-weight: 600;
+    font-size: 16px;
+    &:hover {
+        background-color: #0e0e0e;
+        color: white;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
