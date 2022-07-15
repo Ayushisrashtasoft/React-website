@@ -1,9 +1,12 @@
 import React from 'react'
 import "./Button.scss";
 
-function Button() {
+function Button({buttonName, buttonClass}) {
   return (
-    <button type="button" class="btn comman-button">FREE CONSULATION</button>
+    <>
+    <button type="button" className={`btn comman-button ${buttonClass}`}>{buttonName}</button>
+    
+    </>
   )
 }
 

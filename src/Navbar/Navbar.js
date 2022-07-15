@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button/Button";
 import "./Navbar.scss";
 
 function Navbar() {
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
+
   return (
     <>
 
-      <nav className="navbar navbar-expand-lg p-0 ">
+      <nav className={`navbar navbar-expand-lg p-0  ${(scrollPosition >= 60) ? "activeBg" : ""}`}>
         <div className="container header justify-content-center ">
-        <div id="navbarSupportedContent"   className="collapse navbar-collapse overlay-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-</div>
+          <div id="navbarSupportedContent" className="collapse navbar-collapse overlay-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          </div>
           <div className="row w-100 align-items-center">
-            <div class="col-7 col-sm-4 col-md-4 col-lg-2">
+            <div className="col-7 col-sm-4 col-md-4 col-lg-2">
               {/* <a className="navbar-brand" href="#">Navbar</a> */}
               <img
                 src={require('../images/logo.png')}
@@ -31,12 +52,12 @@ function Navbar() {
 
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <div className="navbar-close-button">
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             X
-                
+                  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    X
 
-              </button>
-              </div>
+
+                  </button>
+                </div>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     <NavLink to="/home" className="nav-link">HOME</NavLink>
@@ -57,8 +78,8 @@ function Navbar() {
                 </ul>
 
               </div>
-              <div className="d-none d-md-block">
-                <Button />
+              <div className="d-none d-sm-block">
+                <Button buttonName={"Free cunsltaion"} />
               </div>
             </div>
 
