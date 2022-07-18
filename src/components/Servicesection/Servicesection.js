@@ -7,6 +7,7 @@ import service4 from "../../images/icons/s04.png"
 import service5 from "../../images/icons/s05.png"
 import service6 from "../../images/icons/s06.png"
 
+
 function Servicesection() {
     const services = [
         {
@@ -36,18 +37,19 @@ function Servicesection() {
 
                     {services.map((data, index) => (
                         <div className="single-service position-relative" key={index} >
-                            
+
                             <img src={data.image} alt="" />
                             <h4>{data.title}</h4>
                             <p>{data.desc}</p>
                             <span>{data.num}</span>
-                            
+
                         </div>
                     ))}
 
                 </div>
 
             </div>
+           
         </>
     )
 }
