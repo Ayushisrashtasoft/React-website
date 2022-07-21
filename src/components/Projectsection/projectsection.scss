@@ -40,23 +40,50 @@
 //     //     position: relative;
 //     // }
 // }
+.project-bg {
+    background-color: #fff;
+}
+
+.project-title {
+    margin-bottom: -119px;
+}
+
 .project-item {
     overflow: hidden;
     .project-details {
         position: absolute;
         bottom: 0px;
         background-color: #eb4435;
+        padding: 44px 40px 40px;
         width: 100%;
         transform: translateY(100%);
         transition: 0.5s;
         h6 {
             font-size: 24px;
-            color: white;
+            color: #fff;
+        }
+        h5 {
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.6;
         }
     }
     &:hover {
         .project-details {
             transform: translateY(0%);
         }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project_title {
+        margin-bottom: 10px;
+    }
+    .project-item {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+    .project-title {
+        margin-bottom: 20px;
     }
 }

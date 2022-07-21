@@ -5,19 +5,22 @@ import Aboutsection from '../components/About/Aboutsection'
 import Servicesection from '../components/Servicesection/Servicesection'
 import Servicedetails from '../components/Servicedetails/Servicedetails'
 import Projectsection from '../components/Projectsection/Projectsection'
-// import Testimonial from '../components/Testimonial/Testimonial'
+import Testimonial from '../components/Testimonial/Testimonial'
+import Packagesection from '../components/Packagesection/Packagesection'
 
 function Home() {
   return (
     <>
-    <div>
+    <div className="footer-space">
     <Herosection/>
     <Contactsection />
     <Aboutsection/>
     <Servicesection/>
     <Servicedetails/>
     <Projectsection/>
-    {/* <Testimonial/> */}
+    <Testimonial/>
+    <Packagesection/>
+
     </div>
     </>
   )

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button/Button";
 import "./Navbar.scss";
+// import Modal from "../components/Modal/Modal";
 
 function Navbar() {
 
@@ -20,6 +21,14 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+// const [openModal, setOpenModal] = useState(false);
+
+
+// const handleModal = () => {
+//   setOpenModal(!openModal)
+// }
+
 
 
 
@@ -71,9 +80,7 @@ function Navbar() {
                   <li className="nav-item">
                     <NavLink to="/project" className="nav-link">PROJECTS</NavLink>
                   </li>
-                  <li className="nav-item">
-                    <NavLink to="/blog" className="nav-link">BLOG</NavLink>
-                  </li>
+                  
 
                 </ul>
 
@@ -86,7 +93,11 @@ function Navbar() {
           </div>
 
         </div>
+
       </nav>
+      <div >
+      {/* <Modal handleMdl={openModal}/> */}
+      </div>
     </>
   );
 }

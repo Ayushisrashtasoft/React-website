@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Title.scss"
 
-function Title({boldTitle,title,about,abouttitle}) {
+function Title({boldTitle,title}) {
   return (
     <>
-    <h2 className="title"><b>{boldTitle}{about}</b> {title}{abouttitle}</h2>
+    <h2 className="title"><b>{boldTitle}</b> {title}</h2>
     </>
   )
 }

@@ -1,3 +1,13 @@
+.services-bg {
+    background-color: #fff;
+    padding-top: 65px;
+}
+
+.service-title {
+    text-align: center;
+    margin-bottom: 60px
+}
+
 .service-container {
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +81,24 @@
                 z-index: 0;
                 transform: translateY(0%);
             }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .service-container {
+        .single-service {
+            width: 50%;
+            padding: 54px 55px 56px 50px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .service-container {
+        .single-service {
+            width: 100%;
+            padding: 36px;
         }
     }
 }

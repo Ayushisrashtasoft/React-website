@@ -6,6 +6,7 @@ import service3 from "../../images/icons/s03.png"
 import service4 from "../../images/icons/s04.png"
 import service5 from "../../images/icons/s05.png"
 import service6 from "../../images/icons/s06.png"
+import Title from '../Title/Title'
 
 
 function Servicesection() {
@@ -32,24 +33,30 @@ function Servicesection() {
 
     return (
         <>
-            <div className='container py-5'>
-                <div className="service-container">
+            <div className="services-bg">
+                <div className='container py-5'>
+                    <div className="service-title">
+                        <Title boldTitle={"Best services for you"} title={"for you"} />
+                    </div>
+                    <div className="service-container">
 
-                    {services.map((data, index) => (
-                        <div className="single-service position-relative" key={index} >
 
-                            <img src={data.image} alt="" />
-                            <h4>{data.title}</h4>
-                            <p>{data.desc}</p>
-                            <span>{data.num}</span>
+                        {services.map((data, index) => (
+                            <div className="single-service position-relative" key={index} >
 
-                        </div>
-                    ))}
+                                <img src={data.image} alt="" />
+                                <h4>{data.title}</h4>
+                                <p>{data.desc}</p>
+                                <span>{data.num}</span>
+
+                            </div>
+                        ))}
+
+                    </div>
 
                 </div>
-
             </div>
-           
+
         </>
     )
 }

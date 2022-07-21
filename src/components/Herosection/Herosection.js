@@ -25,7 +25,7 @@ function Herosection() {
                         <img src={require("../../images/01.jpg")} alt=""/>
                     </div>
                 </div>
-                <div>
+                <div className='animation'>
                     <div className="circle-one"></div>
                     <div className="circle-two"></div>
                     <div className="circle-three"></div>

@@ -1,8 +1,11 @@
 import React from 'react'
+import Testimonial from '../components/Testimonial/Testimonial'
 
 function Project() {
   return (
-    <div>Project</div>
+    <div className="footer-space">
+    <Testimonial/>
+    </div>
   )
 }
 
